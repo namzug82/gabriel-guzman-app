@@ -1,0 +1,41 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "39d8c1fb12ab568c4f2541376cff1333",
+    "packages": [
+        {
+            "name": "gabriel/fw",
+            "version": "dev-devel",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/namzug82/gabriel-guzman-fw.git",
+                "reference": "b4ac7fc865437282d45f983823c59cce710c057d"
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "Fw\\": "src/Fw"
+                }
+            },
+            "time": "2015-06-11 05:14:04"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "gabriel/fw": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.5.9"
+    },
+    "platform-dev": []
+}
