@@ -5,12 +5,20 @@ ini_set( "display_errors", "on" );
 
 require '../vendor/autoload.php';
 
+//define("ROOT", $_SERVER['DOCUMENT_ROOT'] . '/../src/App/Component/Routing/Yaml/routing.yml');
+
 use Fw\Application;
-use Fw\Component\Routing\;
+use Fw\Component\Routing\YamlParser;
+use Fw\Component\Routing\GenericParser;
+use Symfony\Component\Yaml\Parser;
 
 $app = new Application;
- 
-$routing = new YamlParser;
-$app->setRouting($routing);
-
+$yaml = new YamlParser;
+//$yaml = new Parser;
+$route = new GenericParser($yaml);
+$route->parseRoutes();
+//$app->setRouting($routing);
 $app->run();
+
+// $b = new PDFBook();
+// $r = new EBookReader($b);
