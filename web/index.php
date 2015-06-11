@@ -3,11 +3,11 @@
 require '../vendor/autoload.php';
 
 use Fw\Application;
-use Fw\YmlRouting;
+use Fw\Component\Routing\;
 
 $app = new Application;
  
-$routing = new YmlROuting;
-$app->setRoutingComponent($routing);
+$routing = new YamlParser;
+$app->setRouting($routing);
 
 $app->run();

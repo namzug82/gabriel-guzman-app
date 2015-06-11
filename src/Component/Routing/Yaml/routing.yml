@@ -1,0 +1,3 @@
+route1:
+    path:     /
+    defaults: { _controller: 'Application::run' }
