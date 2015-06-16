@@ -1,3 +1,11 @@
-route1:
-    path:     /
-    defaults: { _controller: 'Application::run' }
+home:
+    path:     "/"
+    allowed_methods: ['get']
+
+some-page:
+    path: "some-page"
+    allowed_methods: ['get']
+
+some-{variable}-page:
+    path: "some/{variable}/page"
+    allowed_methods: ['get']

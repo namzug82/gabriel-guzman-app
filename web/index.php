@@ -8,9 +8,10 @@ require '../vendor/autoload.php';
 use Fw\Application;
 use Fw\Component\Routing\YamlParser;
 use Fw\Component\Routing\GenericParser;
+use Fw\Component\Routing\Router;
 use Symfony\Component\Yaml\Parser;
 
-define("ROOT", $_SERVER['DOCUMENT_ROOT'] . '/../src/App/Resources/config/routing/yaml/routing.yml');
+define("ROOT", __DIR__ . '/../src/App/Resources/config/routing/yaml/routing.yml');
 
 $app = new Application;
 
@@ -18,7 +19,9 @@ $parser = new Parser;
 $yaml = new YamlParser($parser, ROOT);
 
 $route = new GenericParser($yaml);
-var_dump($route->parseRoutes());
+
+$router = new Router($route);
+
 
 $app->run();
 
