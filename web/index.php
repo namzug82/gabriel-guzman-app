@@ -22,16 +22,13 @@ $yaml = new YamlParser($parser, ROOT);
 $route = new GenericParser($yaml);
 
 $router = new Router($route);
-// $routeName = $router->getRouteName();
-// $subRouteName = $router->getSubRouteName($routeName);
+
 $request = new Request();
 $requestPath = $request->getPath();
-// $subRouteName = $router->getRouteNameIfMatchPath($request);
 $requestSubRoute = $router->getSubRouteName($requestPath);
 
 $dispatcher = new Dispatcher();
 $controller = $dispatcher->getController($requestSubRoute);
-new $controller;
-$controller($request);
+$invokeResponse = new $controller();
+$invokeResponse($request);
 //$app->run();
-
