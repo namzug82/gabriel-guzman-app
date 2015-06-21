@@ -3,26 +3,23 @@ namespace App\Controller;
 
 use Fw\Component\Controller\Controller;
 use Fw\Component\Request\Request;
-use Fw\Component\Response\Response;
+use Fw\Component\Response\JsonResponse;
 
 final class HomeController implements Controller
 {
     public function __invoke(Request $request)
     {
-        // echo "Invoked HomeController";
-        $dataFromController = "Invoked HomeController";
-        
-        // public function indexAction($firstname, $lastname)
-        // {
-        //     return new JsonResponse( 
-        //         array( 
-        //             'firstName' => $firstname,
-        //             'lastName' => $lastname 
-        //         ) 
-        //     );
-        // }
+        //$dataFromController = "Invoked HomeController";
+        //$response = new WebResponse($dataFromController);
 
-        $response = new Response($dataFromController);
+        $firstname = "gabriel";
+        $lastname = "guzman";
+        $response = new JsonResponse(
+                                    array( 
+                                        'firstName' => $firstname,
+                                        'lastName' => $lastname 
+                                    ) 
+                                );
         return $response;
     }
 }

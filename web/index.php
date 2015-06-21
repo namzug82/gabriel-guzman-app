@@ -11,6 +11,7 @@ use Fw\Component\Routing\GenericParser;
 use Fw\Component\Routing\Router;
 use Fw\Component\Request\Request;
 use Fw\Component\Dispatcher\Dispatcher;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Fw\Component\View\JsonView;
 use Fw\Component\View\TwigView;
 use Symfony\Component\Yaml\Parser;
@@ -34,13 +35,12 @@ $controller = $dispatcher->getController($requestSubRoute);
 
 $invokeResponse = new $controller();
 $response = $invokeResponse($request);
-$dataResponse = $response->getData();
 
-if ($dataResponse instanceof JsonResponse) {
-    $response = new JsonView();
+if ($response->getData() instanceof JsonResponse) {
+    $view = new JsonView();
 } else {
-    $response = new TwigView();
+    $view = new TwigView();
 }
-$response->render($dataResponse);
+$view->render($response);
 
 //$app->run();
