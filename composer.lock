@@ -12,7 +12,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/namzug82/gabriel-guzman-fw.git",
-                "reference": "e89f0d82932673f8b4e2bc6ca3468c99dd222e55"
+                "reference": "7b3f1e72ddb65dc22b2c60baf724c29bc646751f"
             },
             "require": {
                 "php": ">=5.5.9",
@@ -24,7 +24,7 @@
                     "Fw\\": "src/Fw"
                 }
             },
-            "time": "2015-06-16 08:02:39"
+            "time": "2015-06-21 08:52:59"
         },
         {
             "name": "symfony/yaml",
@@ -33,12 +33,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml.git",
-                "reference": "54c88f3dd9bce62cb3e57a0d7dcecaa665192a4d"
+                "reference": "51a0a87882fae22c1f677fbcff9265b1d42d172f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/54c88f3dd9bce62cb3e57a0d7dcecaa665192a4d",
-                "reference": "54c88f3dd9bce62cb3e57a0d7dcecaa665192a4d",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/51a0a87882fae22c1f677fbcff9265b1d42d172f",
+                "reference": "51a0a87882fae22c1f677fbcff9265b1d42d172f",
                 "shasum": ""
             },
             "require": {
@@ -74,7 +74,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2015-06-05 19:54:03"
+            "time": "2015-06-18 12:58:06"
         }
     ],
     "packages-dev": [],
