@@ -15,11 +15,11 @@ final class HomeController implements Controller
         $firstname = "gabriel";
         $lastname = "guzman";
         $response = new JsonResponse(
-                                    array( 
-                                        'firstName' => $firstname,
-                                        'lastName' => $lastname 
-                                    ) 
-                                );
+                            array( 
+                                'firstName' => $firstname,
+                                'lastName' => $lastname 
+                                ) 
+                        );    
         return $response;
     }
 }
