@@ -17,8 +17,7 @@ use Fw\Component\Database\PDO;
 use Symfony\Component\Yaml\Parser;
 
 define("ROOT", __DIR__ . '/../src/App/Resources/config/routing/yaml/routing.yml');
-
-//$app = new Application;
+define("TEMPLATES", __DIR__ . '/../src/App/Resources/config/views');
 
 $parser = new Parser;
 $yaml = new YamlParser($parser, ROOT);
@@ -27,21 +26,15 @@ $route = new GenericParser($yaml);
 $router = new Router($route);
 
 $request = new Request;
-$requestPath = $request->getPath();
-$requestSubRoute = $router->getSubRouteName($requestPath);
+// $requestPath = $request->getPath();
+// $requestSubRoute = $router->getSubRouteName($requestPath);
 
 $dispatcher = new Dispatcher;
-$controller = $dispatcher->getController($requestSubRoute);
+// $controller = $dispatcher->getController($requestSubRoute);
 
-$invokeResponse = new $controller();
-$response = $invokeResponse($request);
+// $invokeResponse = new $controller();
+// $response = $invokeResponse($request);
 
-if ($response->getData() instanceof JsonResponse) {
-    $view = new JsonView();
-} else {
-    $view = new TwigView();
-}
-$view->render($response);
 
 
 $host = "localhost"; 
@@ -63,5 +56,8 @@ $database = new PDO($db, $host, $user, $password);
 // $statement->execute();
 
 // return $statement->fetch();
-
-//$app->run();
+$app = new Application;
+$app->setRouter($router);
+$app->setRequest($request);
+$app->setDispatcher($dispatcher);
+$app->run();
