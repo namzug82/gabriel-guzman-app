@@ -12,11 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/namzug82/gabriel-guzman-fw.git",
-                "reference": "cdace70b8b351bbe84a7ef7e6bb63703b9be1e36"
+                "reference": "32e77fff7d80c586b6608539a826f5a829ff5eb1"
             },
             "require": {
                 "php": ">=5.5.9",
-                "symfony/yaml": "2.6.*"
+                "symfony/yaml": "2.6.*",
+                "twig/twig": "^1.18"
             },
             "type": "project",
             "autoload": {
@@ -24,7 +25,7 @@
                     "Fw\\": "src/Fw"
                 }
             },
-            "time": "2015-06-22 09:47:33"
+            "time": "2015-06-24 21:07:43"
         },
         {
             "name": "symfony/yaml",
@@ -75,6 +76,63 @@
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
             "time": "2015-06-18 12:58:06"
+        },
+        {
+            "name": "twig/twig",
+            "version": "1.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twigphp/Twig.git",
+                "reference": "12bf70d9addf613260056f9840aee23b151073f7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/12bf70d9addf613260056f9840aee23b151073f7",
+                "reference": "12bf70d9addf613260056f9840aee23b151073f7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.7"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.18-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Twig_": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Armin Ronacher",
+                    "email": "armin.ronacher@active-4.com",
+                    "role": "Project Founder"
+                },
+                {
+                    "name": "Twig Team",
+                    "homepage": "http://twig.sensiolabs.org/contributors",
+                    "role": "Contributors"
+                }
+            ],
+            "description": "Twig, the flexible, fast, and secure template language for PHP",
+            "homepage": "http://twig.sensiolabs.org",
+            "keywords": [
+                "templating"
+            ],
+            "time": "2015-06-24 16:24:09"
         }
     ],
     "packages-dev": [],
