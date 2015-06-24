@@ -17,24 +17,15 @@ use Fw\Component\Database\PDO;
 use Symfony\Component\Yaml\Parser;
 
 define("ROOT", __DIR__ . '/../src/App/Resources/config/routing/yaml/routing.yml');
-define("TEMPLATES", __DIR__ . '/../src/App/Resources/config/views');
+define("TEMPLATES", __DIR__ . '/../src/App/Resources/views');
 
 $parser = new Parser;
 $yaml = new YamlParser($parser, ROOT);
 $route = new GenericParser($yaml);
-
 $router = new Router($route);
-
 $request = new Request;
-// $requestPath = $request->getPath();
-// $requestSubRoute = $router->getSubRouteName($requestPath);
-
 $dispatcher = new Dispatcher;
-// $controller = $dispatcher->getController($requestSubRoute);
-
-// $invokeResponse = new $controller();
-// $response = $invokeResponse($request);
-
+$twig = new TwigView(TEMPLATES);
 
 
 $host = "localhost"; 
@@ -60,4 +51,5 @@ $app = new Application;
 $app->setRouter($router);
 $app->setRequest($request);
 $app->setDispatcher($dispatcher);
+$app->setWebView($twig);
 $app->run();
