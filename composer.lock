@@ -12,7 +12,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/namzug82/gabriel-guzman-fw.git",
-                "reference": "32e77fff7d80c586b6608539a826f5a829ff5eb1"
+                "reference": "719c3c171a918afdbb862b6cbf621f25c450d792"
             },
             "require": {
                 "php": ">=5.5.9",
@@ -25,7 +25,7 @@
                     "Fw\\": "src/Fw"
                 }
             },
-            "time": "2015-06-24 21:07:43"
+            "time": "2015-06-25 13:07:00"
         },
         {
             "name": "symfony/yaml",
