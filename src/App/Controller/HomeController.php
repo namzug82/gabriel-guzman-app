@@ -8,10 +8,25 @@ use Fw\Component\Response\WebResponse;
 
 final class HomeController implements Controller
 {
+    private $database;
+
+    public function __construct(Database $database)
+    {
+        $this->database = $database;
+    }
+
     public function __invoke(Request $request)
     {
         $templateName = "index.html.twig";
         $parameters = $request->getMethod();
+
+        $username = $parameters["get"]["username"];
+        $password = $parameters["get"]["password"];
+        $statement = $this->database->prepare('INSERT INTO users (username, password) VALUES (:username, :password)');
+        $statement->bindParam(':username', $username, \PDO::PARAM_STR);
+        $statement->bindParam(':password', $password, \PDO::PARAM_STR);
+        $statement->execute();
+
         $response = new WebResponse($templateName, $parameters["get"]);
             
         return $response;

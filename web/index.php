@@ -27,29 +27,16 @@ $request = new Request;
 $dispatcher = new Dispatcher;
 $twig = new TwigView(TEMPLATES);
 
-
 $host = "localhost"; 
 $user = "root"; 
 $password = "1234"; 
 $db = "fw_db"; 
-
 $database = new PDO($db, $host, $user, $password);
-// $statement = $database->prepare('SELECT * FROM users WHERE username = :username AND password = :password');
-// $statement->bindParam(':username', $username, \PDO::PARAM_STR);
-// $statement->bindParam(':password', $password, \PDO::PARAM_STR);
-// $statement->execute();
 
-// $username = 'manolo';
-// $password = '1234';
-// $statement = $database->prepare('INSERT INTO users (username, password) VALUES (:username, :password)');
-// $statement->bindParam(':username', $username, \PDO::PARAM_STR);
-// $statement->bindParam(':password', $password, \PDO::PARAM_STR);
-// $statement->execute();
-
-// return $statement->fetch();
 $app = new Application;
 $app->setRouter($router);
 $app->setRequest($request);
 $app->setDispatcher($dispatcher);
 $app->setWebView($twig);
+$app->setDatabase($database);
 $app->run();
