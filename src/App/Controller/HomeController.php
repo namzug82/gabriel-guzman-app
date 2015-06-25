@@ -5,6 +5,7 @@ use Fw\Component\Controller\Controller;
 use Fw\Component\Request\Request;
 use Fw\Component\Response\JsonResponse;
 use Fw\Component\Response\WebResponse;
+use Fw\Component\Database\Database;
 
 final class HomeController implements Controller
 {
@@ -19,6 +20,16 @@ final class HomeController implements Controller
     {
         $templateName = "index.html.twig";
         $parameters = $request->getMethod();
+
+        $tableBuilder = $this->database->prepare("CREATE TABLE IF NOT EXISTS " . 
+                            "users " . 
+                            "(" .
+                            "id INT(10) PRIMARY KEY AUTO_INCREMENT, " .
+                            "username VARCHAR(255) NOT NULL, " .
+                            "password VARCHAR(255) NOT NULL" .
+                            ");" 
+                        );
+        $tableBuilder->execute();
 
         $username = $parameters["get"]["username"];
         $password = $parameters["get"]["password"];
