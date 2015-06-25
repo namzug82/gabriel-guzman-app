@@ -8,6 +8,7 @@ require '../vendor/autoload.php';
 use Fw\Application;
 use Fw\Component\Routing\YamlParser;
 use Fw\Component\Routing\PhpParser;
+use Fw\Component\Routing\JsonParser;
 use Fw\Component\Routing\GenericParser;
 use Fw\Component\Routing\Router;
 use Fw\Component\Request\Request;
@@ -17,16 +18,20 @@ use Fw\Component\View\TwigView;
 use Fw\Component\Database\PDO;
 use Symfony\Component\Yaml\Parser;
 
-//define("ROOT", __DIR__ . '/../src/App/Resources/config/routing/yaml/routing.yml');
-define("ROOT", __DIR__ . '/../src/App/Resources/config/routing/php/routing.php');
+define("ROOT", __DIR__ . '/../src/App/Resources/config/routing/yaml/routing.yml');
+//define("ROOT", __DIR__ . '/../src/App/Resources/config/routing/php/routing.php');
 //define("ROOT", __DIR__ . '/../src/App/Resources/config/routing/json/routing.json');
 define("TEMPLATES", __DIR__ . '/../src/App/Resources/views');
 
 $parser = new Parser;
-//$yaml = new YamlParser($parser, ROOT);
-$php = new PhpParser(ROOT);
-//$route = new GenericParser($yaml);
-$route = new GenericParser($php);
+$yaml = new YamlParser($parser, ROOT);
+//$php = new PhpParser(ROOT);
+//$json = new JsonParser(ROOT);
+
+$route = new GenericParser($yaml);
+//$route = new GenericParser($php);
+//$route = new GenericParser($json);
+
 $router = new Router($route);
 $request = new Request;
 $dispatcher = new Dispatcher;
