@@ -26,7 +26,7 @@ define("TEMPLATES", __DIR__ . '/../src/App/Resources/views');
 define("SERVICES", __DIR__ . '/../src/App/Resources/config/services/yaml/services.yml');
 
 $services = new Container(SERVICES);
-$servicesContainer = $services->getContainer;
+$servicesContainer = $services->getContainer();
 
 $parser = new Parser;
 $yaml = new YamlParser($parser, ROOT);
