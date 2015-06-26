@@ -42,13 +42,7 @@ $request = new Request;
 $dispatcher = new Dispatcher;
 $twig = new TwigView(TEMPLATES);
 
-// $host = "localhost"; 
-// $user = "root"; 
-// $password = "1234"; 
-// $db = "fw_db"; 
-//$database = new PDO($db, $host, $user, $password);
 $database = $servicesContainer->get('pdo');
-//$database->setParameter('pdo.transport', 'db', 'host', 'user', 'password');
 
 $app = new Application;
 $app->setRouter($router);
