@@ -6,6 +6,7 @@ ini_set( "display_errors", "on" );
 require '../vendor/autoload.php';
 
 use Fw\Application;
+use Fw\Component\Container\Container;
 use Fw\Component\Routing\YamlParser;
 use Fw\Component\Routing\PhpParser;
 use Fw\Component\Routing\JsonParser;
@@ -22,6 +23,10 @@ define("ROOT", __DIR__ . '/../src/App/Resources/config/routing/yaml/routing.yml'
 //define("ROOT", __DIR__ . '/../src/App/Resources/config/routing/php/routing.php');
 //define("ROOT", __DIR__ . '/../src/App/Resources/config/routing/json/routing.json');
 define("TEMPLATES", __DIR__ . '/../src/App/Resources/views');
+define("SERVICES", __DIR__ . '/../src/App/Resources/config/services/yaml/services.yml');
+
+$services = new Container(SERVICES);
+$servicesContainer = $services->getContainer;
 
 $parser = new Parser;
 $yaml = new YamlParser($parser, ROOT);
@@ -37,11 +42,13 @@ $request = new Request;
 $dispatcher = new Dispatcher;
 $twig = new TwigView(TEMPLATES);
 
-$host = "localhost"; 
-$user = "root"; 
-$password = "1234"; 
-$db = "fw_db"; 
-$database = new PDO($db, $host, $user, $password);
+// $host = "localhost"; 
+// $user = "root"; 
+// $password = "1234"; 
+// $db = "fw_db"; 
+//$database = new PDO($db, $host, $user, $password);
+$database = $servicesContainer->get('pdo');
+//$database->setParameter('pdo.transport', 'db', 'host', 'user', 'password');
 
 $app = new Application;
 $app->setRouter($router);

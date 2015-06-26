@@ -1,0 +1,10 @@
+parameters:
+    pdo.transport:
+        - "fw_db"
+        - "localhost"
+        - "root"
+        - "1234"
+services:
+    pdo:
+        class:        Fw\Component\Database\PDO
+        arguments:    ["%pdo.transport%"]
