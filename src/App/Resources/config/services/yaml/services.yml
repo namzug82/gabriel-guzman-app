@@ -1,9 +1,37 @@
 parameters:
+    yaml.path:  /../../../../../../../src/App/Resources/config/routing/yaml/routing.yml
+    php.path:   /../../../../../../../src/App/Resources/config/routing/php/routing.php
+    json.path:  /../../../../../../../src/App/Resources/config/routing/json/routing.json
+    view.path:  /../../../../../../../src/App/Resources/views
     pdo.db: fw_db
     pdo.host: localhost
     pdo.user: root
     pdo.password: 1234
 services:
+    parser:
+        class:          Symfony\Component\Yaml\Parser
+    yaml_parser:
+        class:          Fw\Component\Routing\YamlParser
+        arguments:      ["@parser", "%yaml.path%"]
+    php_parser:
+        class:          Fw\Component\Routing\PhpParser
+        arguments:      ["%php.path%"]
+    json_parser:
+        class:          Fw\Component\Routing\JsonParser
+        arguments:      ["%json.path%"]
+    generic_parser:
+        class:          Fw\Component\Routing\GenericParser
+        arguments:      ["@json_parser"]
+    router:
+        class:          Fw\Component\Routing\Router
+        arguments:      ["@generic_parser"]
+    request:
+        class:          Fw\Component\Request\Request
+    dispatcher:
+        class:          Fw\Component\Dispatcher\Dispatcher
+    twig_view:
+        class:          Fw\Component\View\TwigView
+        arguments:      ["%view.path%"]
     pdo:
         class:          Fw\Component\Database\PDO
         arguments:      ["%pdo.db%", "%pdo.host%", "%pdo.user%", "%pdo.password%"]

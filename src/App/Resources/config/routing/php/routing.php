@@ -5,14 +5,19 @@ return array(
         "controller" => "App\Controller\Home",
         "allowed_methods" => ["get"]
     ],
-    "some-page" => [
-        "path" => "some-page",
-        "controller" => "App\Controller\Home",
+    "insert-task-form" => [
+        "path" => "insert-task-form",
+        "controller" => "App\Controller\InsertForm",
         "allowed_methods" => ["get"]
     ],
-    "some-{variable}-page" => [
-        "path" => "some/{variable}/page",
-        "controller" => "App\Controller\Home",
+    "insert-task" => [
+        "path" => "insert-task",
+        "controller" => "App\Controller\Insert",
+        "allowed_methods" => ["get", "post"]
+    ],
+    "delete-task" => [
+        "path" => "delete-task",
+        "controller" => "App\Controller\Delete",
         "allowed_methods" => ["get"]
     ]
 );
