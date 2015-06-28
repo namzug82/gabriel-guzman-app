@@ -3,73 +3,70 @@ namespace App\Classes;
 
 use Fw\Component\Database\Database;
 
-final class UserPersistence implements UserRespository
+final class TaskPersistence implements TaskRepository
 {
     private $database;
 
     public function __construct(Database $database)
     {
         $this->database = $database;
+        $this->createTableToDo();
     }
 
-    public function createTableUser()
+    public function createTableToDo()
     {
         $statement = $this->database->prepare(   
             "CREATE TABLE IF NOT EXISTS " . 
-                "user " . 
+                "to_do " . 
                 "(" .
                 "id INT(10) PRIMARY KEY AUTO_INCREMENT, " .
-                "username VARCHAR(255) NOT NULL, " .
-                "password VARCHAR(255) NOT NULL" .
+                "task VARCHAR(255) NOT NULL " .
                 ")" .
             ";" 
         );
         $statement->execute();
     }
 
-    public function showTableUser()
+    public function showTableToDo()
     {
         $statement = $this->database->prepare(   
             "SELECT " . 
                 "* " . 
             "FROM " .
-                "user " .
+                "to_do " .
             "GROUP BY " .
-                "username" .
+                "task" .
             ";" 
         );
         $statement->execute();
         return $statement->fetchAll();
     }
 
-    public function insertUser()
+    public function insertTask($task)
     {
         $statement = $this->database->prepare(  
             "INSERT INTO " .
-                "user " .
+                "to_do " .
                 "(" .
-                "username," . 
-                "password" .
+                "task" . 
                 ") " .
             "VALUES " .
                 "(" .
-                ":username, " . 
-                ":password" .
+                ":task " . 
                 ")" .
             ";"
         );
-        $statement->bindParam(':username', $username, \PDO::PARAM_STR);
-        $statement->bindParam(':password', $password, \PDO::PARAM_STR);
+        $statement->bindParam(':task', $task, \PDO::PARAM_STR);
         $statement->execute();
     }
 
-    public function deleteUser()
+    public function deleteTask($task)
     {
         $statement = $this->database->prepare(  
             "DELETE FROM " .
-                "user " .
+                "to_do " .
             "WHERE " .
-                "username = '" . $username . "'" . 
+                "task = '" . $task . "'" . 
             ";"
         );        
         $statement->execute();

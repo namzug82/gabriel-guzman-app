@@ -5,13 +5,13 @@
     </head>
     
     <body>
-        <h1>List of Users</h1>
+        <h1>To Do List</h1>
         <ul>
-        {% for user in users %}
-            <li>{{user.username}}</li>
+        {% for item in items %}
+            <li>{{item.task}}</li>
         {% endfor %}
         </ul>
-        <a href="http://gabriel.fw/index.php/insert-user">To Insert an User, please click here!</a><br>
-        <p>To Delete an User, please prompt the username in the URL like this example: http://gabriel.fw/index.php/delete-user?username=gabriel</p><br>
+        <a href="http://gabriel.fw/index.php/insert-task-form">To Insert a Task, please click here!</a><br>
+        <p>To Delete a Task, please prompt the task in the URL like this example: <b>http://gabriel.fw/index.php/delete-task?task=study</b></p><br>
     </body>
 </html>

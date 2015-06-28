@@ -7,6 +7,6 @@ services:
     pdo:
         class:          Fw\Component\Database\PDO
         arguments:      ["%pdo.db%", "%pdo.host%", "%pdo.user%", "%pdo.password%"]
-    user_persistence:
-        class:          App\Classes\UserPersistence
+    task_persistence:
+        class:          App\Classes\TaskPersistence
         arguments:      ["@pdo"]
