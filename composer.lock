@@ -12,7 +12,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/namzug82/gabriel-guzman-fw.git",
-                "reference": "ae11f5880c0417ee5056f352c05e8d542e4e2c82"
+                "reference": "b0e59f050c11b73c9eedf3fcb00fb7fb94ed7400"
             },
             "require": {
                 "php": ">=5.5.9",
@@ -29,7 +29,7 @@
                     "Fw\\": "src/Fw"
                 }
             },
-            "time": "2015-06-26 12:12:07"
+            "time": "2015-06-28 14:44:12"
         },
         {
             "name": "symfony/config",
@@ -87,12 +87,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/DependencyInjection.git",
-                "reference": "4da18652a32441c083050e77f7be25aa103c5935"
+                "reference": "844a92ba4b7fd595f3e14c2f7bad16b1ac69aeee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/DependencyInjection/zipball/4da18652a32441c083050e77f7be25aa103c5935",
-                "reference": "4da18652a32441c083050e77f7be25aa103c5935",
+                "url": "https://api.github.com/repos/symfony/DependencyInjection/zipball/844a92ba4b7fd595f3e14c2f7bad16b1ac69aeee",
+                "reference": "844a92ba4b7fd595f3e14c2f7bad16b1ac69aeee",
                 "shasum": ""
             },
             "require": {
@@ -139,7 +139,7 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2015-06-24 20:39:48"
+            "time": "2015-06-26 14:42:48"
         },
         {
             "name": "symfony/expression-language",
