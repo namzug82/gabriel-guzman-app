@@ -50,5 +50,4 @@ $app->setRequest($request);
 $app->setDispatcher($dispatcher);
 $app->setWebView($twig);
 $app->setDatabase($database);
-$app->setContainer($servicesContainer);
 $app->run();
