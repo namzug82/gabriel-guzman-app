@@ -5,5 +5,8 @@ parameters:
     pdo.password: 1234
 services:
     pdo:
-        class:        Fw\Component\Database\PDO
-        arguments:    ["%pdo.db%", "%pdo.host%", "%pdo.user%", "%pdo.password%"]
+        class:          Fw\Component\Database\PDO
+        arguments:      ["%pdo.db%", "%pdo.host%", "%pdo.user%", "%pdo.password%"]
+    user_persistence:
+        class:          App\Classes\UserPersistence
+        arguments:      ["@pdo"]

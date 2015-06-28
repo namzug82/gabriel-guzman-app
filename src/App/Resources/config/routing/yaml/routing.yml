@@ -3,12 +3,12 @@ home:
     controller: App\Controller\Home
     allowed_methods: ['get']
 
-some-page:
-    path: some-page
-    controller: App\Controller\Home    
-    allowed_methods: ['get']
+insert-user:
+    path: insert-user
+    controller: App\Controller\Insert    
+    allowed_methods: ['post']
 
-some-{variable}-page:
-    path: "some/{variable}/page"
-    controller: App\Controller\Home
+delete-user:
+    path: delete-user-user
+    controller: App\Controller\Delete    
     allowed_methods: ['get']
