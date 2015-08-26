@@ -3,9 +3,19 @@ home:
     controller: App\Controller\Home
     allowed_methods: ['get']
 
+province:
+    path: province/{name}
+    controller: App\Controller\Province   
+    allowed_methods: ['get']
+
+province-municipe:
+    path: province/{province}/municipe/{municipe}
+    controller: App\Controller\ProvinceMunicipe   
+    allowed_methods: ['get']
+
 insert-task-form:
     path: insert-task-form
-    controller: App\Controller\InsertForm    
+    controller: App\Controller\InsertForm  
     allowed_methods: ['get']
 
 insert-task:
@@ -15,5 +25,5 @@ insert-task:
 
 delete-task:
     path: delete-task
-    controller: App\Controller\Delete    
+    controller: App\Controller\Delete  
     allowed_methods: ['get']

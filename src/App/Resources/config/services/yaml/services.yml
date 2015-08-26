@@ -21,7 +21,7 @@ services:
         arguments:      ["%json.path%"]
     generic_parser:
         class:          Fw\Component\Routing\GenericParser
-        arguments:      ["@json_parser"]
+        arguments:      ["@yaml_parser"]
     router:
         class:          Fw\Component\Routing\Router
         arguments:      ["@generic_parser"]

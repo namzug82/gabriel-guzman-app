@@ -37,12 +37,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Config.git",
-                "reference": "b857230e15135537376aa4d844c6680a76642db7"
+                "reference": "b137bf54b8bbc5492b5ee9aa6f12a619e5fb192c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Config/zipball/b857230e15135537376aa4d844c6680a76642db7",
-                "reference": "b857230e15135537376aa4d844c6680a76642db7",
+                "url": "https://api.github.com/repos/symfony/Config/zipball/b137bf54b8bbc5492b5ee9aa6f12a619e5fb192c",
+                "reference": "b137bf54b8bbc5492b5ee9aa6f12a619e5fb192c",
                 "shasum": ""
             },
             "require": {
@@ -79,7 +79,7 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2015-06-18 16:14:27"
+            "time": "2015-08-24 07:18:02"
         },
         {
             "name": "symfony/dependency-injection",
@@ -87,12 +87,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/DependencyInjection.git",
-                "reference": "844a92ba4b7fd595f3e14c2f7bad16b1ac69aeee"
+                "reference": "99c05679526e9293783ce3a9059890b47da1d97e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/DependencyInjection/zipball/844a92ba4b7fd595f3e14c2f7bad16b1ac69aeee",
-                "reference": "844a92ba4b7fd595f3e14c2f7bad16b1ac69aeee",
+                "url": "https://api.github.com/repos/symfony/DependencyInjection/zipball/99c05679526e9293783ce3a9059890b47da1d97e",
+                "reference": "99c05679526e9293783ce3a9059890b47da1d97e",
                 "shasum": ""
             },
             "require": {
@@ -139,7 +139,7 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2015-06-26 14:42:48"
+            "time": "2015-08-24 07:31:10"
         },
         {
             "name": "symfony/expression-language",
@@ -147,12 +147,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/expression-language.git",
-                "reference": "eccfd6f3d9444270b0a5561beefc8846b96ddc38"
+                "reference": "b4b129ac5811676c573b34b614051b99a9ed76c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/expression-language/zipball/eccfd6f3d9444270b0a5561beefc8846b96ddc38",
-                "reference": "eccfd6f3d9444270b0a5561beefc8846b96ddc38",
+                "url": "https://api.github.com/repos/symfony/expression-language/zipball/b4b129ac5811676c573b34b614051b99a9ed76c8",
+                "reference": "b4b129ac5811676c573b34b614051b99a9ed76c8",
                 "shasum": ""
             },
             "require": {
@@ -188,7 +188,7 @@
             ],
             "description": "Symfony ExpressionLanguage Component",
             "homepage": "https://symfony.com",
-            "time": "2015-05-12 15:16:46"
+            "time": "2015-08-24 07:18:02"
         },
         {
             "name": "symfony/filesystem",
@@ -196,12 +196,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Filesystem.git",
-                "reference": "24fc9ecf8ed33772e0744397ba976cae95240a3b"
+                "reference": "493a748758fde9f6c8c2fc7a6f517801ceff7a25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Filesystem/zipball/24fc9ecf8ed33772e0744397ba976cae95240a3b",
-                "reference": "24fc9ecf8ed33772e0744397ba976cae95240a3b",
+                "url": "https://api.github.com/repos/symfony/Filesystem/zipball/493a748758fde9f6c8c2fc7a6f517801ceff7a25",
+                "reference": "493a748758fde9f6c8c2fc7a6f517801ceff7a25",
                 "shasum": ""
             },
             "require": {
@@ -237,7 +237,7 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2015-06-18 16:25:07"
+            "time": "2015-08-24 07:21:16"
         },
         {
             "name": "symfony/phpunit-bridge",
@@ -245,12 +245,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
-                "reference": "accfa613f71d390bf95da7b902abb57229af19e3"
+                "reference": "ef5892e427bc244f124c75b7fb68906dbfa8d520"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/accfa613f71d390bf95da7b902abb57229af19e3",
-                "reference": "accfa613f71d390bf95da7b902abb57229af19e3",
+                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/ef5892e427bc244f124c75b7fb68906dbfa8d520",
+                "reference": "ef5892e427bc244f124c75b7fb68906dbfa8d520",
                 "shasum": ""
             },
             "require": {
@@ -289,7 +289,7 @@
             ],
             "description": "Symfony PHPUnit Bridge",
             "homepage": "https://symfony.com",
-            "time": "2015-06-19 15:09:14"
+            "time": "2015-07-01 14:16:54"
         },
         {
             "name": "symfony/yaml",
@@ -298,12 +298,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml.git",
-                "reference": "51a0a87882fae22c1f677fbcff9265b1d42d172f"
+                "reference": "c044d1744b8e91aaaa0d9bac683ab87ec7cbf359"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/51a0a87882fae22c1f677fbcff9265b1d42d172f",
-                "reference": "51a0a87882fae22c1f677fbcff9265b1d42d172f",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/c044d1744b8e91aaaa0d9bac683ab87ec7cbf359",
+                "reference": "c044d1744b8e91aaaa0d9bac683ab87ec7cbf359",
                 "shasum": ""
             },
             "require": {
@@ -339,7 +339,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2015-06-18 12:58:06"
+            "time": "2015-07-26 08:59:42"
         },
         {
             "name": "twig/twig",
@@ -347,21 +347,25 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "12bf70d9addf613260056f9840aee23b151073f7"
+                "reference": "71b4dc2572eb822552e394a254a7bdf16be15448"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/12bf70d9addf613260056f9840aee23b151073f7",
-                "reference": "12bf70d9addf613260056f9840aee23b151073f7",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/71b4dc2572eb822552e394a254a7bdf16be15448",
+                "reference": "71b4dc2572eb822552e394a254a7bdf16be15448",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.7"
             },
+            "require-dev": {
+                "symfony/debug": "~2.7",
+                "symfony/phpunit-bridge": "~2.7"
+            },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.18-dev"
+                    "dev-master": "1.21-dev"
                 }
             },
             "autoload": {
@@ -396,7 +400,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-06-24 16:24:09"
+            "time": "2015-08-24 09:58:37"
         }
     ],
     "packages-dev": [],
